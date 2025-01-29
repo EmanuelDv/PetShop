@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Petshop Informativa</title>
+        <link rel="stylesheet" href="../static/css/styles.css">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+        </header>
+
+        <!-- Navbar -->
+        <nav>
+            <img src="../static/images/LogoPetshop.png" alt="Logo de la Petshop">
+            <div>
+                <a href="#productos">Productos</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#citas">Agendar Citas</a>
+                <a href="https://wa.me/1234567890" target="_blank">
+                    <img src="../static/images/whatsapp-logo.png" alt="WhatsApp" class="whatsapp-logo">
+                </a>
+            </div>
+        </nav>
+        
+
+        <main>
+            <!-- Sección de Productos -->
+            <section id="productos">
+                <h2>Productos</h2>
+                <div class="product-grid">
+                    <div class="product-card" onclick="flipCard(this)">
+                        <div class="card-face front">
+                            <img src="../static/images/palitopollo.png"
+                                alt="Palitospollo" class="product-image">
+                            <h3>Snacks mini palitos de pollo y queso 50g</h3>
+                        </div>
+                        <div class="card-face back">
+                            <p>Mini palitos de pollo y queso 50g</p>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="flipCard(this)">
+                        <div class="card-face front">
+                            <img src="../static/images/Huesoarroz.png"
+                                alt="Huesoarroz" class="product-image">
+                            <h3>Hueso de arroz con pollo 4cm</h3>
+                        </div>
+                        <div class="card-face back">
+                            <p>Hueso de arroz con pollo 4cm *50gr</p>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="flipCard(this)">
+                        <div class="card-face front">
+                            <img src="../static/images/PalitosTernera.png"
+                                alt="PalitosTernera" class="product-image">
+                            <h3>Snacks palitos de ternera cortos 50g</h3>
+                        </div>
+                        <div class="card-face back">
+                            <p>Snacks palitos de ternera cortos 50g</p>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="flipCard(this)">
+                        <div class="card-face front">
+                            <img src="../static/images/Delicapricho.png"
+                                alt="Delicapricho" class="product-image">
+                            <h3>Chunky delicaprichos snacks *160gr</h3>
+                        </div>
+                        <div class="card-face back">
+                            <p>Cuentan con cubierta crujiente y centro blando
+                                con sabor a tocineta. Es un snack ideal para
+                                perros de todas las edades. Contiene vitaminas y
+                                minerales. </p>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="flipCard(this)">
+                        <div class="card-face front">
+                            <img src="../static/images/barritasCabra.png"
+                                alt="barritasCabra" class="product-image">
+                            <h3>Snack barritas de leche de cabra</h3>
+                        </div>
+                        <div class="card-face back">
+                            <p>Deliciosas barritas de leche de cabra, cuenta con
+                                vitamina E, probioticos y prebioticos que
+                                favorecen la microvida de los intestinos y
+                                ayudan a que el tracto intestinal sea mas
+                                fluido.</p>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="flipCard(this)">
+                        <div class="card-face front">
+                            <img src="../static/images/snackpescado.png"
+                                alt="snackpescado" class="product-image">
+                            <h3>Snacks Galletas con forma de pescado envueltas
+                                en pollo 50gr</h3>
+                        </div>
+                        <div class="card-face back">
+                            <p>Galletas con forma de pescado envueltas en
+                                pollo</p>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="flipCard(this)">
+                        <div class="card-face front">
+                            <img src="../static/images/cachorrochunky.png"
+                                alt="cachorrochunky" class="product-image">
+                            <h3>Chunky cachorros sabor pollo</h3>
+                        </div>
+                        <div class="card-face back">
+                            <p>Si estás pensando en el bienestar del miembro más
+                                tierno de tu familia, Chunky cachorros es la
+                                opción ideal de alimento. Esta creado para
+                                suplir las necesidades nutricionales de perros
+                                en etapa de crecimiento.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="flipCard(this)">
+                        <div class="card-face front">
+                            <img src="../static/images/maxperformance.png"
+                                alt="maxperformance" class="product-image">
+                            <h3>Max Performance Perros adultos Pollo y Arroz *2
+                                Kg</h3>
+                        </div>
+                        <div class="card-face back">
+                            <p>Alimento rico en proteínas y antioxidantes
+                                saludables para su organismo, mejorando sus
+                                defensas y reforzando su vitalidad. No contiene
+                                colorantes ni aromatizantes artificiales. Aporta
+                                proteínas de gran calidad. La linaza mejora su
+                                digestión, aporta omega 3, carbohidratos buenos
+                                y extracto de Yucca, mejorando el olor en las
+                                heces. Contiene prebióticos que mejora la
+                                calidad de los nutrientes, da vitalidad y
+                                energía.
+
+                                Sabor: Pollo y arroz</p>
+                        </div>
+                    </div>
+                    <!-- Agregar más tarjetas de productos según sea necesario -->
+                </div>
+            </section>
+
+            <!-- Sección de Servicios con Carrousel -->
+            <section id="servicios">
+                <h2>Servicios</h2>
+                <p>Contamos con una gama de servicios de calidad para el cuidado
+                    de tus mascotas, como baños, cortes de pelo y más.</p>
+
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="service-card">
+                                <img src="servicio1.jpg" alt="Servicio 1"
+                                    class="service-image">
+                                <h3>Baño</h3>
+                                <p>Baños para mascotas, cuidando su piel y
+                                    salud.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="service-card">
+                                <img src="servicio2.jpg" alt="Servicio 2"
+                                    class="service-image">
+                                <h3>Corte de Pelo</h3>
+                                <p>Corte de pelo para que tu mascota luzca
+                                    perfecta.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="service-card">
+                                <img src="servicio3.jpg" alt="Servicio 3"
+                                    class="service-image">
+                                <h3>Consulta Veterinaria</h3>
+                                <p>Consulta veterinaria para mantener a tu
+                                    mascota saludable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Agendar Cita -->
+            <section id="citas">
+                <h2>Agendar Cita</h2>
+                <p>Aquí podrás agendar una cita para el baño de tu mascota de manera fácil y rápida.</p>
+                <a href="http://127.0.0.1:3000/" target="_blank" class="btn-agendar">
+                    Ir a agendar cita
+                </a>
+            </section>
+            
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            &copy; 2025 Petshop
+        </footer>
+        <script>
+            // Añadir desplazamiento suave a los enlaces
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // Ajusta el desplazamiento para que el navbar no quede encima
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Función para girar la tarjeta de producto
+            function flipCard(card) {
+                card.classList.toggle('flipped');
+            }
+
+            // Función para cambiar de carousel automáticamente
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-item');
+            const totalSlides = slides.length;
+
+            setInterval(function () {
+                // Mover al siguiente slide
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % totalSlides;
+                slides[currentSlide].classList.add('active');
+            }, 3500); // Cambiar cada 3.5 segundos
+        </script>
+
+    </body>
+</html>

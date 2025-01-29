@@ -1,0 +1,277 @@
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave en toda la página */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fb;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #D16E9E; /* Rosado */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 3rem; /* Bajar un poco el header */
+    margin-top: 3rem; /* Agregar espacio superior */
+}
+
+/* Navbar */
+nav {
+    background-color: #8E44AD; /* Morado */
+    padding: 0.5rem 1rem;  /* Ajuste del padding */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav img {
+    width: 120px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+}
+
+nav a {
+    color: white;
+    margin: 0 0.5rem; /* Reducir el margen */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Espacio debajo del Navbar */
+main {
+    margin-top: 120px; /* Asegura que el contenido principal quede debajo del navbar */
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Secciones */
+section {
+    padding: 3rem 1rem;
+    margin: 2rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#productos, #servicios, #citas {
+    padding-top: 60px; /* Ajusta este valor según el alto del navbar */
+    margin-top: 3.5rem; /* Evita que se solapen con el navbar */
+}
+
+/* Responsividad: Ajustes solo para las secciones y grid */
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 0.5rem; /* Menos padding en pantallas pequeñas */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+
+    .carousel-item {
+        flex: 1 0 50%; /* 2 servicios por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 1.5rem 0.5rem; /* Aún menos padding en pantallas muy pequeñas */
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+
+    .carousel-item {
+        flex: 1 0 100%; /* 1 servicio por fila */
+    }
+}
+
+/* Icono de WhatsApp */
+.whatsapp-logo {
+    max-width: 30px;  /* Asegura que el ancho no exceda los 30px */
+    max-height: 30px; /* Asegura que la altura no exceda los 30px */
+    width: auto;      /* Mantiene la proporción original */
+    height: auto;     /* Mantiene la proporción original */
+    vertical-align: middle; /* Alinea el logo con el texto */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #D16E9E;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Estilo para la cuadrícula de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    gap: 20px;
+    padding: 2rem;
+}
+
+/* Estilos de las tarjetas de productos */
+.product-card {
+    width: 100%;
+    height: 350px; /* Ajustar el alto de las tarjetas */
+    perspective: 1000px; /* Permite el efecto de giro en 3D */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que los elementos estén distribuidos */
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Oculta la cara posterior cuando se gira */
+    transition: transform 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.front {
+    background-color: #fff; /* Color blanco */
+    border: 2px solid #ddd; /* Borde frontal */
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.back {
+    background-color: #fff; /* Mantener el color blanco en la parte posterior */
+    border: 2px solid #ddd; /* Igual borde que el frontal */
+    transform: rotateY(180deg); /* La cara posterior está rotada */
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Efecto de giro */
+.product-card.flipped .front {
+    transform: rotateY(180deg); /* La cara frontal rota */
+}
+
+.product-card.flipped .back {
+    transform: rotateY(0deg); /* La cara posterior vuelve a la posición original */
+}
+
+/* Estilos de la imagen del producto */
+.product-image {
+    max-width: 100%;
+    height: 200px; /* Controlar el tamaño de las imágenes */
+    object-fit: contain; /* Mantener la relación de aspecto */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Estilos del título y el botón */
+.product-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8E44AD;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #732D91;
+}
+
+/* Estilos del Carrousel de Servicios */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 1 0 33.33%; /* 3 servicios por fila en pantallas grandes */
+    padding: 1rem;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.service-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Ajustes del Carrousel */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 1 0 50%; /* 2 servicios por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        flex: 1 0 100%; /* 1 servicio por fila en pantallas muy pequeñas */
+    }
+}
