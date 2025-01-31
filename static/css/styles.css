@@ -58,7 +58,7 @@ nav a:hover {
 
 /* Espacio debajo del Navbar */
 main {
-    margin-top: 120px; /* Asegura que el contenido principal quede debajo del navbar */
+    margin-top: 60px; /* Asegura que el contenido principal quede debajo del navbar */
     width: 90%;
     max-width: 1200px;
 }
@@ -66,18 +66,90 @@ main {
 /* Secciones */
 section {
     padding: 3rem 1rem;
-    margin: 2rem 0;
+    margin: 6rem 0;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     box-sizing: border-box;
 }
-
-#productos, #servicios, #citas {
-    padding-top: 60px; /* Ajusta este valor según el alto del navbar */
-    margin-top: 3.5rem; /* Evita que se solapen con el navbar */
+section h2 {
+    font-size: 2.5rem; /* Tamaño más grande */
+    color: #8E44AD; /* Un color vibrante */
+    text-align: center; /* Centrar el título */
+    text-transform: uppercase; /* Poner en mayúsculas */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 20px; /* Espacio inferior */
+    position: relative; /* Permitir decoraciones */
 }
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 8px auto 0; /* Centrado */
+    border-radius: 2px;
+}
+
+
+#productos, #servicios p{
+    padding-top: 15px; /* Ajusta este valor según el alto del navbar */
+    margin-top: 1rem; /* Evita que se solapen con el navbar */
+    
+}
+
+#citas {
+    padding-top: 60px;
+    margin-top: 3.5rem;
+    margin-bottom: 5.5rem; /* Agrega espacio debajo de la sección */
+}
+#servicios p {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+/* Estilo para el párrafo dentro de la sección "Agendar Cita" */
+#citas p {
+    font-size: 1.2rem;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+
+/* Estilo para el botón "Agendar Cita" */
+.btn-agendar {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(90deg, #8E44AD, #8E44AD);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover */
+.btn-agendar:hover {
+    background: linear-gradient(90deg, #D16E9E, #8E44AD);
+    transform: scale(1.05);
+}
+
 
 /* Responsividad: Ajustes solo para las secciones y grid */
 @media (max-width: 768px) {
